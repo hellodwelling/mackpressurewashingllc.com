@@ -997,11 +997,13 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d7f1f96a-7dfe-450e-bcab-2b5b485c206e.jpeg"
-                alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
-            />
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d7f1f96a-7dfe-450e-bcab-2b5b485c206e.jpeg"
+                    alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
+                />
+            
         </div>
         
         <div
@@ -1014,11 +1016,13 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e94bd17c-59af-4198-9629-172b9905dcfb.jpeg"
-                alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
-            />
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/e94bd17c-59af-4198-9629-172b9905dcfb.jpeg"
+                    alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
+                />
+            
         </div>
         
         <div
@@ -1031,11 +1035,13 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/970a827f-edc4-4edf-bad7-c2aee7b29499.jpeg"
-                alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
-            />
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/970a827f-edc4-4edf-bad7-c2aee7b29499.jpeg"
+                    alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
+                />
+            
         </div>
         
         <div
@@ -1048,11 +1054,13 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-            <img
-                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a72c1200-f42b-4a71-93f1-a522524343f1.jpeg"
-                alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
-            />
+            
+                <img
+                    class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                    src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a72c1200-f42b-4a71-93f1-a522524343f1.jpeg"
+                    alt="Pressure Washing company Mack Pressure Washing LLC in Savannah, GA"
+                />
+            
         </div>
         
     </div>
@@ -2797,7 +2805,7 @@
                     <div class="relative h-16 px-6 bg-white">
                         <h2 class="sr-only" :id="$id('modal-title')">Modal Gallery</h2>
 
-                        <button @click="galleryModalOpen = false;" class="absolute p-1 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <button id="close-modal-button" @click="galleryModalOpen = false; handleClick()" class="absolute p-1 transition rounded top-5 right-1 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
                             <span class="sr-only">Close modal</span>
                             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -3228,6 +3236,14 @@
     </template>
 </div>
 
+<script>
+    function handleClick() {
+        const videos = document.getElementsByClassName('gallery-modal-video')
+        for (let video of videos) {
+            video.muted = true
+        }
+    }
+</script>
         </div>
         
         <div class="flex justify-center -m-1">
@@ -3833,8 +3849,8 @@ observer.observe(target)
               
               <p class="text-base text-gray-100">
                   Mack Pressure Washing LLC<br/>
-                   
-                      Savannah, GA <br/>
+                  
+                      Brunswick, Ga <br/>
                   
                   +1 912-324-1204
               </p>
